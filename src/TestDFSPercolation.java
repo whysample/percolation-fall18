@@ -5,7 +5,7 @@ import org.junit.Test;
 public class TestDFSPercolation {
 	
 	public IPercolate getDFSPercolater(int size) {
-		return new PercolationDFSFast(size);
+		return new PercolationBFS(size);
 	}
 	
 	/**
