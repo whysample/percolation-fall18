@@ -16,19 +16,19 @@ public class PercolationBFS extends PercolationDFSFast{
 			Integer p1=p.remove();
 			int row1=p1/size;
 			int col1=p1%size;
-			if(inBounds(row1-1,col1)&&myGrid[row1-1][col1]==OPEN){
+			if(inBounds(row1-1,col1)&&myGrid[row1-1][col1]==OPEN&&myGrid[row1-1][col1]!=FULL){
 				p.add(myGrid[row-1][col1]);
 				myGrid[row1-1][col1] = FULL;
 			}
-			if(inBounds(row1+1,col1)&&myGrid[row1+1][col1]==OPEN){
+			if(inBounds(row1+1,col1)&&myGrid[row1+1][col1]==OPEN&&myGrid[row1+1][col1]!=FULL){
 				p.add(myGrid[row+1][col1]);
 				myGrid[row1+1][col1] = FULL;
 			}
-			if(inBounds(row1,col1-1)&&myGrid[row1][col1-1]==OPEN){
+			if(inBounds(row1,col1-1)&&myGrid[row1][col1-1]==OPEN&&myGrid[row1][col1-1]!=FULL){
 				p.add(myGrid[row1][col1-1]);
 				myGrid[row1][col1-1] = FULL;
 			}
-			if(inBounds(row1,col1+1)&&myGrid[row1][col1+1]==OPEN){
+			if(inBounds(row1,col1+1)&&myGrid[row1][col1+1]==OPEN&&myGrid[row1][col1+1]!=FULL){
 				p.add(myGrid[row1][col1+1]);
 				myGrid[row1][col1+1] = FULL;
 			}
