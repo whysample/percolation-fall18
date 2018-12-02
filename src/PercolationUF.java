@@ -13,7 +13,7 @@ public class PercolationUF implements IPercolate{
 		VTOP=size*size;
 		VBOTTOM=size*size+1;
 	}
-	protected boolean inBounds(int row, int col) {
+	public boolean inBounds(int row, int col) {
 		if (row < 0 || row >= myGrid.length) return false;
 		if (col < 0 || col >= myGrid[0].length) return false;
 		return true;
@@ -72,6 +72,7 @@ public class PercolationUF implements IPercolate{
 	public int numberOfOpenSites() {
 		return myOpenCount;
 	}
+	@Override
 	public boolean percolates() {
 		return myFinder.connected(VTOP, VBOTTOM);
 	}
