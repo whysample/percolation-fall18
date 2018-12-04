@@ -1,8 +1,18 @@
 import java.util.*;
 public class PercolationBFS extends PercolationDFSFast{
+	/**
+	 * Constructor than creates the object percolationBFS and assigns the grid's length and width to size
+	 * @param size is an int that represents the size of the grid's length and width
+	 */
 	public PercolationBFS(int size) {
 		super(size);
 	}
+	
+	/**
+	 * Function that uses a Queue to fill the surrounding cells if the cells are open. 
+	 * @param row is an int that represents the cell's specific row
+	 * @param col is an int that represents the cell's specific column
+	 */
 	@Override
 	protected void dfs(int row, int col) {
 		Queue<Integer> p=new LinkedList<>();
