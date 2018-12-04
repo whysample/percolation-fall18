@@ -11,7 +11,7 @@ public class PercolationUF implements IPercolate{
 	 * @param finder is an object of IUnionFind that is used to create a set of grids.
 	 * @param size is an int that represents the size of the length and width of the grid.
 	 */
-	public PercolationUF(IUnionFind finder, int size) {
+	public PercolationUF(int size, IUnionFind finder) {
 		myGrid= new boolean[size][size];
 		finder.initialize(size*size+2);
 		myFinder=finder;
